@@ -1,5 +1,5 @@
 import React from "react";
-import Component2 from "./component2";
+import Component2 from "./Component2";
 
 function Component1(){
     return <React.Fragment>

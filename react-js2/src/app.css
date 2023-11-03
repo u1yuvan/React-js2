@@ -1,0 +1,15 @@
+.myHeader{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkgrey;
+    background: url(../src/images/wallpaperflare.com_wallpaper\ \(13\).jpg);
+    padding: 10px 50px;
+    border-radius: 8px;
+    border: 1px solid red;
+    text-align: center;
+    outline: 1px  solid blue;
+}
+
+.myPara{
+    font-family: 'Courier New', Courier, monospace;
+
+}

@@ -14,10 +14,10 @@ function Products() {
                             <div className="d-flex align-items-center justify-content-start mt-1">
                                 <h6 className="font-weight-bold my-2">$120.00</h6>
                                 <button className="btn btn-primary">-</button>
-                                <span>{displayFormattedProductCount()}</span>
+                                <span style={{padding:" 0px 14px ", 'font-size': 13 }}>{displayFormattedProductCount()}</span>
                                 <button className="btn btn-primary">+</button>
                             </div>
-                        </div><img src="" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2" />
+                        </div><img src={require( "../images/pngegg (1).png") }alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2" />
                     </div>
                 </li>
     </ul>)

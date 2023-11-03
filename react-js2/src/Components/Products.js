@@ -1,5 +1,8 @@
 let productCount = 0;
+let isAvailable = 'UnAvailable';
 
+let badgeClass = 'badge-margin-left-40 badge ';
+badgeClass += isAvailable === 'Available' ? 'bg-success' : 'bg-danger';
 function displayFormattedProductCount(){
     return productCount > 0 ? productCount: "0"
 }
@@ -16,8 +19,9 @@ function Products() {
                                 <button className="btn btn-primary">-</button>
                                 <span style={{padding:" 0px 14px ", 'font-size': 13 }}>{displayFormattedProductCount()}</span>
                                 <button className="btn btn-primary">+</button>
+                                <span className={badgeClass}>{isAvailable}</span>
                             </div>
-                        </div><img src={require( "../images/pngegg (1).png") }alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2" />
+                        </div><img src={require( "../images/pngegg (1).png") }alt="Generic placeholder image" width="200" className="ml-lg-5 order-1 order-lg-2" />
                     </div>
                 </li>
     </ul>)

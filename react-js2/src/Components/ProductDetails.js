@@ -1,28 +1,28 @@
-import Button from "./Button";
-
-
-
-let isAvailable = 'UnAvailable';
-
+ import React, {useState} from 'react';
+ import Button from "./Button";
 
 
 
 function ProductDetails(props) {
     let badgeClass = 'badge-margin-left-40 badge ';
-    badgeClass += isAvailable ? 'bg-success' : 'bg-danger';
-    let productCount = 0;
+    badgeClass += props.isAvailable ? 'bg-success' : 'bg-danger';
+    // let productCount = 0;
+    let [productCount,updateCount] = useState(0)
     function displayFormattedProductCount() {
         return productCount > 0 ? productCount : "0"
     }
      
     let decrementProductCount = function () {
-        productCount--
-        console.log(productCount);;
+        // productCount--
+        // console.log(productCount);
+        updateCount(--productCount);
     }
     
     let incrementProductCount = function () {
-        productCount++
-        console.log(productCount);;
+        // productCount++
+        // console.log(productCount);
+        updateCount(++productCount)
+
     }
     
     return (
@@ -32,7 +32,6 @@ function ProductDetails(props) {
             <span style={{ padding: " 0px 14px ", 'fontSize': 13 }}>{displayFormattedProductCount()}</span>
             <Button eventHandler={incrementProductCount}>+</Button>
             <span className={badgeClass}>{props.isAvailable ? 'Available' : "UnAvailable"}</span>
-            {props.children}
         </div>
     )
 }

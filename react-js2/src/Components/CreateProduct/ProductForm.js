@@ -1,19 +1,27 @@
+import React,{useState} from 'react'
+
+
 function ProductForm() {
+    let [pName, updateName] = useState('');
+    let [pPrice, updatePrice] = useState('');
+    let [pDescription, updateDescription] = useState('');
+    let [pAvailable, updateAvilability] = useState('');
+    let [pImageUrl, updateImageUrl] = useState('');
    
     function nameInputHandler(event){
-        console.log(event.target.value);    
+        updateName(event.target.value);    
     }
     function priceInputHandler(event){
-        console.log(event.target.value);    
+        updatePrice(event.target.value);    
     }
     function descriptionInputHandler(event){
-        console.log(event.target.value);    
+        updateDescription(event.target.value);    
     }
     function availabilityInputHandler(event){
-        console.log(event.target.value);    
+        updateAvilability(event.target.value);    
     }
     function imageInputHandler(event){
-        console.log(event.target.value);    
+        updateImageUrl(event.target.value);    
     }
     return (<form className="row g-3">
         <div className="col-md-6">

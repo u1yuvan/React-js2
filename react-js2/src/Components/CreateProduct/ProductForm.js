@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-function ProductForm() {
+function ProductForm(props) {
     let [pName, updateName] = useState('');
     let [pPrice, updatePrice] = useState('');
     let [pDescription, updateDescription] = useState('');
@@ -30,7 +30,7 @@ function ProductForm() {
             pID: 1,
             pName: pName,
             desc: pDescription,
-            isAvailable: pAvailable,
+            isAvailable: Boolean(pAvailable),
             image: pImageUrl,
             price: Number(pPrice),
         }
@@ -41,7 +41,8 @@ function ProductForm() {
         updateImageUrl('');
         updatePrice('');
 
-        console.log(product);
+        // console.log(product);
+        props.createProduct(product);
     }
     return (<form className="row g-3" onSubmit={createProductEventHandler}>
         <div className="col-md-6">

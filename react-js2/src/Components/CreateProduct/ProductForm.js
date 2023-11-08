@@ -34,6 +34,13 @@ function ProductForm() {
             image: pImageUrl,
             price: Number(pPrice),
         }
+
+        updateName('');
+        updateAvilability(false);
+        updateDescription('');
+        updateImageUrl('');
+        updatePrice('');
+
         console.log(product);
     }
     return (<form className="row g-3" onSubmit={createProductEventHandler}>
@@ -43,6 +50,7 @@ function ProductForm() {
                 className="form-control"
                 id="name"
                 placeholder="Product Name"
+                value={pName}
                 onChange={nameInputHandler} />
         </div>
         <div className="col-md-6">
@@ -52,6 +60,7 @@ function ProductForm() {
                 className="form-control"
                 id="price"
                 placeholder="Product Price"
+                value={pPrice}
                 onChange={priceInputHandler} />
         </div>
 
@@ -61,18 +70,19 @@ function ProductForm() {
                 className="form-control"
                 id="description"
                 placeholder="Product Description"
+                value={pDescription}
                 onChange={descriptionInputHandler} />
         </div>
 
         <div class="form-check form-switch">
-            <input className="form-check-input" type="checkbox" role="switch" id="isAvailable"
+            <input className="form-check-input" type="checkbox" role="switch" id="isAvailable" checked={pAvailable}
                 onChange={availabilityInputHandler} />
             <label className="form-check-label" for="isAvailable">Is product available in stock?</label>
         </div>
 
         <div className="form-group">
             <label for="select-image">Select product image</label>
-            <input type="file" className="form-control" id="select-image"
+            <input type="file" className="form-control" id="select-image" value={pImageUrl}
                 onChange={imageInputHandler} />
         </div>
 

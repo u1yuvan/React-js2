@@ -11,6 +11,7 @@ function ProductForm(props) {
     function nameInputHandler(event) {
         updateName(event.target.value);
     }
+    
     function priceInputHandler(event) {
         updatePrice(event.target.value);
     }

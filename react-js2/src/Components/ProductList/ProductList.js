@@ -7,8 +7,7 @@ import Products from './Products'
 function ProductList(props) {
     // console.log(props.newProduct);
 
-    return (<div className='row'>
-        <div className='col-lg-8 mx-auto'>
+    return (
             <ul className="list-group shadow">
                 {
                     props.newProductList.map((product) => {
@@ -24,9 +23,7 @@ function ProductList(props) {
                     })
                 }
 
-            </ul>
-        </div>
-    </div>);
+            </ul>);
 }
 
 

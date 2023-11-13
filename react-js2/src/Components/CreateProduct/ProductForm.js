@@ -44,6 +44,7 @@ function ProductForm(props) {
 
         // console.log(product);
         props.createProduct(product);
+        props.onCancel()
     }
     return (<form className="row g-3" onSubmit={createProductEventHandler}>
         <div className="col-md-6">
@@ -90,6 +91,7 @@ function ProductForm(props) {
 
 
         <button type="submit" className="btn btn-primary">Add Product</button>
+        <button type='button' onClick={props.onCancel}>Cancel</button>
     </form>);
 }
 
